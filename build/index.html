@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Secondhand Trade</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+        <link type="text/css" href="./app.css" rel="stylesheet">
+        <script type="text/javascript" src="./events.js"></script>
+        <script type="text/javascript" src="./app.js"></script>
+    </head>
+    <body onload="load_table()">
+
+        <div id="login-form" title="login by address">
+            <p class="validateTips">All inputs should not be empty</p>
+            <form>
+                <fieldset>
+                    <label for="name">Seller Name: </label>
+                    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+                    <label for="address">Seller Address: </label>
+                    <input type="text" name="addr" id="address" class="text ui-widget-content ui-corner-all">
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="dialog-form" title="secondhand goods for sale">
+            <p class="validateTips">All inputs should not be empty</p>
+            <form>
+                <fieldset>
+                    <label for="new_good_name">Good Name: </label>
+                    <input type="text" name="name" id="new_good_name" class="text ui-widget-content ui-corner-all">
+                    <label for="new_good_des">Good Description: </label>
+                    <input type="text" name="des" id="new_good_des" value="" class="text ui-widget-content ui-corner-all">
+                    <label for="value">Good Value: </label>
+                    <input type="text" name="value" id="value"  class="text ui-widget-content ui-corner-all">
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="trade-form" title="purchase or exchange">
+            <p class="validateTips">You can purchase or exchange the secondhand good</p>
+            <form>
+                <fieldset>
+                    <label for="show-seller">Seller: </label>
+                    <div id="show-seller">a</div>
+                    <label for="good-name">Good: </label>
+                    <div id="good-name">c</div>
+                    <label for="show-des">Description: </label>
+                    <div id="show-des">a</div>
+                    <label for="show-value">Value: </label>
+                    <div id="show-value">a</div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="header">Secondhand Trade</div>
+        <div class="seller_trades">
+            <div id="seller_info">
+                <div>
+                    <span id="seller_name"><span>Seller: </span><span>John</span></span>
+                </div>
+                <div>
+                    <span id="seller_addr"><span>Address: </span><span>0x...</span></span>
+                </div>
+                <div>
+                    <span id="balance"><span>Balance: </span><span>100</span></span>
+                </div>
+
+            </div>
+            <!--<div id="description">description</div>-->
+            <input type="button" class="add" id="login" value="log in">
+            <input type="button" class="add" id="add_trade" value="add a trade">
+            <div class="trades-contain ui-widget">
+                <table id="seller_trades" class="ui-widget ui-widget-content">
+                    <thead>
+                    <tr class="ui-widget-header">
+                        <th>seller</th>
+                        <th>good</th>
+                        <th>description</th>
+                        <th>value</th>
+                        <th>status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>car</td>
+                        <td>The car is beautiful.</td>
+                        <td>100</td>
+                        <td>For sale</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="goods_list">
+            <div class="alignment">All trades are below: </div>
+            <div class="trades-contain" class="ui-widget">
+                <table id="trades" class="ui-widget ui-widget-content">
+                    <thead>
+                    <tr class="ui-widget-header">
+                        <th>seller</th>
+                        <th>good</th>
+                        <th>description</th>
+                        <th>value</th>
+                        <th>status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>car</td>
+                        <td>The car is beautiful.</td>
+                        <td>100</td>
+                        <td>For sale</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
+
